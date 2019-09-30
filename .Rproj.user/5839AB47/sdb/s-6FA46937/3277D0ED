@@ -1,0 +1,18 @@
+{
+    "contents" : "data(\"BRCA_Counts\")\ncolData<-data.frame(testVariable=as.factor(c(rep(0,5),rep(1,5))), row.names=colnames(BRCA_Counts))\nRBDA(countData = BRCA_Counts,colData,testVariable = \"testVariable\", randomSeed = 1990)\n",
+    "created" : 1569855546725.000,
+    "dirty" : true,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "582625529",
+    "id" : "3277D0ED",
+    "lastKnownWriteTime" : 0,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

@@ -1,0 +1,25 @@
+{
+    "contents" : "",
+    "created" : 1569855680115.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "7C37E887",
+    "lastKnownWriteTime" : 0,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "i7i38607zi",
+        "caption" : "BRCA_Counts",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=BRCA_Counts&cache_key=i7i38607zi",
+        "displayedObservations" : 5000,
+        "environment" : "",
+        "object" : "BRCA_Counts",
+        "totalObservations" : 5000,
+        "variables" : 40
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "type" : "r_dataframe"
+}
