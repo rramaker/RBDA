@@ -1,10 +1,10 @@
 {
-    "contents" : "data(\"BRCA_Counts\")\ncolData<-data.frame(testVariable=as.factor(c(rep(0,5),rep(1,5))), row.names=colnames(BRCA_Counts))\nRBDA(countData = BRCA_Counts,colData,testVariable = \"testVariable\", randomSeed = 1990)\n",
+    "contents" : "data(\"BRCA_Counts\")\nlibrary(parallel)\nBRCAData[which(apply(BRCAData,1,min)>5)]\ncolData<-data.frame(testVariable=as.factor(c(rep(0,3),rep(1,3),rep(2,4))), row.names=colnames(BRCA_Counts))\ncountRanks<-apply(BRCAData[which(apply(BRCAData,1,min)>9),], 2, function(x) rank(-x, ties.method = \"random\"))\ncountRanks<-apply(countRanks,2,as.numeric)\nz<-do.call(cbind,mclapply(1:ncol(countRanks), function(y) cor(countRanks, countRanks[,y],method=\"spearman\"), mc.cores=4))\n\n\nRes<-RBDA(countData = BRCA_Counts,colData,testVariable = \"testVariable\", randomSeed = 1990)\nRes2<-RBDA_2(countData = BRCA_Counts,colData,testVariable = \"testVariable\", randomSeed = 1990)\n\nplot(unlist(lapply(1:100, function(x) sum(BRCAData[,1]==x))))\n",
     "created" : 1569855546725.000,
     "dirty" : true,
     "encoding" : "",
     "folds" : "",
-    "hash" : "582625529",
+    "hash" : "2376854019",
     "id" : "3277D0ED",
     "lastKnownWriteTime" : 0,
     "path" : null,
